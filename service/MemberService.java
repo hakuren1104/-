@@ -66,13 +66,13 @@ public class MemberService implements UserDetailsService {
     }
 
     public void certifiedPhoneNumber(String phoneNumber, String cerNum) {
-        String api_key = "NCSLIDNRYKTOPGXL"; // 여기에 실제 API 키를 입력하세요
-        String api_secret = "MKGNJ4S5D9JE7ZUEJTNRDAVWBI0RPB8X"; // 여기에 실제 API 시크릿을 입력하세요
+        String api_key = "xxxxxxxxxxxxx"; // 여기에 실제 API 키를 입력하세요
+        String api_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // 여기에 실제 API 시크릿을 입력하세요
         Message coolsms = new Message(api_key, api_secret);
 
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("to", phoneNumber);
-        params.put("from", "01076262632"); // 여기에는 실제 발신 번호를 입력하세요
+        params.put("from", "xxxxxxxxxx"); // 여기에는 실제 발신 번호를 입력하세요
         params.put("type", "SMS");
         params.put("text", "AuctionShop 인증번호는 [" + cerNum + "] 입니다.");
         params.put("app_version", "test app 1.2");
